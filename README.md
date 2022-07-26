@@ -75,7 +75,79 @@ Coefficient proportionnel : `0.28`
 
 ## Planification des tests
 
+
+
 ## Etapes des tests
+
+<table>
+  <thead>
+    <tr>
+      <th>Step #</th>
+      <th>Business Process Name : Visiter le site</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Page d'accueil</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Accéder aux franchise</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Accéder aux salles de la franchise</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Revenir à la page d'accueil</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Accéder à la page des évènements</td>
+    </tr>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th>Step #</th>
+      <th>Business Process Name : Poster un commentaire sur une voie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Page d'accueil</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Connexion</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Accéder aux franchise</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Accéder aux salles de la franchise</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Accéder aux informations d'une voie</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Poster un commentaire</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Se déconnecter</td>
+    </tr>
+</table>
+
+Le jeu de données utilisé pour les deux process est créé via des fixtures de Symfony.
 
 ## Execution des tests
 

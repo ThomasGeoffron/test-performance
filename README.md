@@ -41,24 +41,6 @@ Ce test de performance a pour objectif de déterminer les limites de performance
 <table>
   <thead>
     <tr>
-      <th>Test Run</th>
-      <th>Test Scenario Summary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Cycle 1 - Run 1</td>
-      <td>Load Test - 10 minutes test with peak load</td>
-    </tr>
-    <tr>
-      <td>Cycle 1 - Run 2</td>
-      <td>Stress Test - 5 minutes test with 125% of peak load</td>
-</table>
-
-
-<table>
-  <thead>
-    <tr>
       <th>Business Transaction</th>
       <th>User Load</th>
       <th>Response Time</th>
@@ -207,6 +189,23 @@ Nous allons surveiller les métriques suivantes pour les deux types de tests :
 Le jeu de données utilisé pour les deux process est créé via des fixtures de Symfony.
 
 ## Execution des tests
+
+<table>
+  <thead>
+    <tr>
+      <th>Test Run</th>
+      <th>Test Scenario Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cycle 1 - Run 1</td>
+      <td>Load Test - 10 minutes test with peak load</td>
+    </tr>
+    <tr>
+      <td>Cycle 1 - Run 2</td>
+      <td>Stress Test - 5 minutes test with 125% of peak load</td>
+</table>
 
 <table>
   <thead>

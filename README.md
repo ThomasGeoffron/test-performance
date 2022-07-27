@@ -105,6 +105,8 @@ Coefficient proportionnel : `0.28`
 
 ## Planification des tests
 
+Le fait que le serveur soit un hébergement mutualisé indique que la bande passante est limitée car partagée. Ce qui en fait une limitation de l'infrastructure.
+
 Premièrement, nous allons effectuer un test de type `Load Testing` dans lequel des utilisateurs non connectés vont visiter les différentes pages disponibles sur le site.
 
 Deuxièmement, nous allons effectuer un test de type `Stress Testing` dans lequel un utilisateur va se connecter afin de se rendre sur la page d'une voie quelconque et y poste plusieurs commentaires.
@@ -187,6 +189,120 @@ Nous allons surveiller les métriques suivantes pour les deux types de tests :
 Le jeu de données utilisé pour les deux process est créé via des fixtures de Symfony.
 
 ## Execution des tests
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Test Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Purpose</td>
+      <td>Tester le temps de réponse, l'utilisation du CPU et de la bande passante lors d'un fort traffic continu afin d'évaluer si le serveur peut supporter une telle charge</td>
+    </tr>
+    <tr>
+      <td>No. of tests</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td>Ramp-up: 2 min - Steady State : 6 min - Ramp-down : 2 min</td>
+    </tr>
+    <tr>
+      <td>Script</td>
+      <td>Visit.jmx</td>
+    </tr>
+    <tr>
+      <td>Scenario Name</td>
+      <td>Visiter le site</td>
+    </tr>
+    <tr>
+      <td>User Load / Volume</td>
+      <td>200 VUsers</td>
+    </tr>
+    <tr>
+      <td>Entry Criteria</td>
+      <td>
+        <ul>
+          <li>Le code est stable et les fonctionnalités sont vérifiées</li>
+          <li>L'environnement de test est stable</li>
+          <li>Les données de test sont disponibles</li>
+          <li>Les scripts de test sont prêts à être exécutés</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Validation Criteria</td>
+      <td>
+        <ul>
+          <li>Les tests sont terminés avec succès</li>
+          <li>Le temps d'éxecution est inférieurs à 1s</li>
+          <li>L'utilisation du processeur est inférieur à 80%</li>
+          <li>L'utilisation de la bande passante est inférieur à 85%</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Test Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Purpose</td>
+      <td>Tester le temps de réponse, l'utilisation du CPU et de la bande passante lors d'une surchage pour le serveur dans lequel plusieurs compte se connectent et commentent une voie</td>
+    </tr>
+    <tr>
+      <td>No. of tests</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>Duration</td>
+      <td>Ramp-up: 1 min - Steady State : 3 min - Ramp-down : 1 min</td>
+    </tr>
+    <tr>
+      <td>Script</td>
+      <td>Comment.jmx</td>
+    </tr>
+    <tr>
+      <td>Scenario Name</td>
+      <td>Commenter une voie</td>
+    </tr>
+    <tr>
+      <td>User Load / Volume</td>
+      <td>300 VUsers</td>
+    </tr>
+    <tr>
+      <td>Entry Criteria</td>
+      <td>
+        <ul>
+          <li>Le code est stable et les fonctionnalités sont vérifiées</li>
+          <li>L'environnement de test est stable</li>
+          <li>Les données de test sont disponibles</li>
+          <li>Les scripts de test sont prêts à être exécutés</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <td>Validation Criteria</td>
+      <td>
+        <ul>
+          <li>Les tests sont terminés avec succès</li>
+          <li>Le temps d'éxecution est inférieurs à 1s</li>
+          <li>L'utilisation du processeur est inférieur à 80%</li>
+          <li>L'utilisation de la bande passante est inférieur à 85%</li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Resultats des tests
 

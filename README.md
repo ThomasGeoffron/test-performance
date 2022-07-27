@@ -200,11 +200,11 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
   <tbody>
     <tr>
       <td>Cycle 1 - Run 1</td>
-      <td>Load Test - 10 minutes test with peak load</td>
+      <td>Load Test - 3.34 minutes test test with peak load</td>
     </tr>
     <tr>
       <td>Cycle 1 - Run 2</td>
-      <td>Stress Test - 5 minutes test with 125% of peak load</td>
+      <td>Stress Test - test with 200% of peak load</td>
 </table>
 
 <table>
@@ -225,7 +225,7 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
     </tr>
     <tr>
       <td>Duration</td>
-      <td>Ramp-up: 2 min - Steady State : 6 min - Ramp-down : 2 min</td>
+      <td>Ramp-up: 2.19 min (10 utilisateurs toutes les 30 sec) - Steady State : 60 sec - Ramp-down : 20 sec</td>
     </tr>
     <tr>
       <td>Script</td>
@@ -237,7 +237,7 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
     </tr>
     <tr>
       <td>User Load / Volume</td>
-      <td>200 VUsers</td>
+      <td>50 VUsers</td>
     </tr>
     <tr>
       <td>Entry Criteria</td>
@@ -264,6 +264,8 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
   </tbody>
 </table>
 
+
+
 <table>
   <thead>
     <tr>
@@ -282,7 +284,7 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
     </tr>
     <tr>
       <td>Duration</td>
-      <td>Ramp-up: 1 min - Steady State : 3 min - Ramp-down : 1 min</td>
+      <td>Steady State : Temps d'exécution</td>
     </tr>
     <tr>
       <td>Script</td>
@@ -294,7 +296,7 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
     </tr>
     <tr>
       <td>User Load / Volume</td>
-      <td>300 VUsers</td>
+      <td>100 VUsers</td>
     </tr>
     <tr>
       <td>Entry Criteria</td>
@@ -323,8 +325,18 @@ Le jeu de données utilisé pour les deux process est créé via des fixtures de
 
 ## Resultats des tests
 
+![Visit response time](https://github.com/ThomasGeoffron/test-performance/blob/main/Response-time-visit.png?raw=true)
+
+![Visit other graph](https://github.com/ThomasGeoffron/test-performance/blob/main/visit-camembert.png?raw=true)
+
+![Comment response time](https://github.com/ThomasGeoffron/test-performance/blob/main/Response-time-comment.png?raw=true)
+
+![Comment other graph](https://github.com/ThomasGeoffron/test-performance/blob/main/comment-camembert.png?raw=true)
+
 ## Analyse et Optimisations proposées
 
+Suite aux résultats des tests, on peux remarquer que l'environnement de dev ne peux supporter une charge de travail importante. On le remarquer surtout par le temps de réponse aux requêtes.
 
-
-
+Optimisations possibles :
+- Augmenter la RAM de 8Go à au moins 16Go
+- Changer de processeur pour un plus performant

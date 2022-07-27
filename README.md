@@ -49,10 +49,40 @@ Ce test de performance a pour objectif de déterminer les limites de performance
   </thead>
   <tbody>
     <tr>
-      <td>Login</td>
-      <td>1</td>
-      <td>0.1s</td>
-      <td>1</td>
+      <td>Se connecter</td>
+      <td>200</td>
+      <td>1s</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>S'enregistrer</td>
+      <td>200</td>
+      <td>1s</td>
+      <td>500</td>
+    </tr>
+    <tr>
+      <td>Accéder aux franchises</td>
+      <td>350</td>
+      <td>0.3s</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>Accéder aux salles d'une franchises</td>
+      <td>350</td>
+      <td>0.3s</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>Accéder aux évènements</td>
+      <td>350</td>
+      <td>0.3s</td>
+      <td>600</td>
+    </tr>
+    <tr>
+      <td>Commenter une voie</td>
+      <td>50</td>
+      <td>0.5s</td>
+      <td>150</td>
     </tr>
   </tbody>
 </table>
@@ -75,7 +105,14 @@ Coefficient proportionnel : `0.28`
 
 ## Planification des tests
 
+Premièrement, nous allons effectuer un test de type `Load Testing` dans lequel des utilisateurs non connectés vont visiter les différentes pages disponibles sur le site.
 
+Deuxièmement, nous allons effectuer un test de type `Stress Testing` dans lequel un utilisateur va se connecter afin de se rendre sur la page d'une voie quelconque et y poste plusieurs commentaires.
+
+Nous allons surveiller les métriques suivantes pour les deux types de tests :
+- Utilisation du processeur
+- Temps de réponse
+- Utilisation de la bande passante
 
 ## Etapes des tests
 
